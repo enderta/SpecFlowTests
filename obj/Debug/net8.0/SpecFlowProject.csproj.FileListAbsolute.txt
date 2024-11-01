@@ -112,3 +112,4 @@
 /home/cyf/SpecFlowProject/obj/Debug/net8.0/SpecFlowProject.pdb
 /home/cyf/SpecFlowProject/obj/Debug/net8.0/SpecFlowProject.genruntimeconfig.cache
 /home/cyf/SpecFlowProject/obj/Debug/net8.0/ref/SpecFlowProject.dll
+/home/cyf/SpecFlowProject/obj/Debug/net8.0/SpecFlowProject.sourcelink.json

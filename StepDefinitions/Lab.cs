@@ -2,9 +2,11 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Support.UI;
+using SpecFlowProject.Pages;
 
 namespace SpecFlowProject.StepDefinitions
 {
+  
     [Binding]
     public class Lab
     {
@@ -13,6 +15,10 @@ namespace SpecFlowProject.StepDefinitions
         {
             _driver = (IWebDriver)scenarioContext["WebDriver"];
         }
+
+        LoginPage lp=new LoginPage();
+
+      
 
         [Given(@"I login the page")]
         public void GivenILoginThePage()
@@ -25,7 +31,7 @@ namespace SpecFlowProject.StepDefinitions
         [When(@"I enter the following details to login form:")]
         public void WhenIEnterTheFollowingDetailsToLoginForm(Table table)
         {
-            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+           /*  var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
             var firstRow = table.Rows[0];
             string userName = firstRow["User Name"];
             string password = firstRow["Password"];
@@ -33,10 +39,14 @@ namespace SpecFlowProject.StepDefinitions
             wait.Until(d => d.FindElement(By.Name("user-name"))).SendKeys(userName);
             wait.Until(d => d.FindElement(By.Name("password"))).SendKeys(password);
             wait.Until(d => d.FindElement(By.Name("login-button"))).Click();
-            
+             */
+                        // Update the Login method to accept IWebDriver
+            lp.Login((IWebDriver)_driver, table.Rows[0]["User Name"], table.Rows[0]["Password"]);
             // Wait for navigation to complete
             Thread.Sleep(2000);
         }
+
+        //dotnet test --filter TestCategory="Lab" --dry-run
 
         [Given(@"I am on the product listing page")]
         public void GivenIAmOnTheProductListingPage()
