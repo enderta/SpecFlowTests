@@ -16,15 +16,15 @@ namespace SpecFlowProject.StepDefinitions
       var serverUri = new Uri("http://127.0.0.1:4723");
 var options = new AppiumOptions();
 options.AddAdditionalAppiumOption("platformName", "Android");
-options.DeviceName = "R58M43YW9NE"; // Use DeviceName property instead
-options.AutomationName = "UiAutomator2"; // Use AutomationName property instead
+options.DeviceName = "R58M43YW9NE";
+options.AutomationName = "UiAutomator2"; 
 options.AddAdditionalAppiumOption("appium:uiautomator2ServerInstallTimeout", 60000);
 options.AddAdditionalAppiumOption("appium:adbExecTimeout", 60000);
 options.AddAdditionalAppiumOption("appium:autoGrantPermissions", true);
 options.AddAdditionalAppiumOption("appium:ensureWebviewsHavePages", true);
 options.AddAdditionalAppiumOption("appium:nativeWebScreenshot", true);
 options.AddAdditionalAppiumOption("appium:connectHardwareKeyboard", true);
-options.App = "/home/cyf/IdeaProjects/appiumSample/sauceLab.apk"; // Use App property instead
+options.App = "/home/cyf/IdeaProjects/appiumSample/sauceLab.apk"; 
 options.AddAdditionalAppiumOption("appium:appPackage", "com.swaglabsmobileapp");
 options.AddAdditionalAppiumOption("appium:appActivity", "com.swaglabsmobileapp.MainActivity");
 
