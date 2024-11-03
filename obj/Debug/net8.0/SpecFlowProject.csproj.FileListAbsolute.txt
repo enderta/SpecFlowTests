@@ -113,3 +113,7 @@
 /home/cyf/SpecFlowProject/obj/Debug/net8.0/SpecFlowProject.genruntimeconfig.cache
 /home/cyf/SpecFlowProject/obj/Debug/net8.0/ref/SpecFlowProject.dll
 /home/cyf/SpecFlowProject/obj/Debug/net8.0/SpecFlowProject.sourcelink.json
+/home/cyf/SpecFlowProject/bin/Debug/net8.0/Appium.Net.dll
+/home/cyf/SpecFlowProject/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/cyf/SpecFlowProject/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/cyf/SpecFlowProject/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
