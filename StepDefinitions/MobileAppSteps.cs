@@ -3,9 +3,12 @@ using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Appium;
+using OpenQA.Selenium.Appium.Interactions;
+using System.Drawing;
 
 namespace SpecFlowProject.StepDefinitions
 {
+    
     [Binding]
     public class MobileAppSteps
     { 
@@ -44,12 +47,16 @@ options.AddAdditionalAppiumOption("appium:appActivity", "com.swaglabsmobileapp.M
         Thread.Sleep(5000);
         _driver?.FindElement(MobileBy.AccessibilityId("test-Username")).SendKeys("standard_user");
         _driver?.FindElement(MobileBy.AccessibilityId("test-Password")).SendKeys("secret_sauce");
-        _driver?.FindElement(MobileBy.AccessibilityId("test-LOGIN")).Click();
+         var loginButton =  _driver?.FindElement(MobileBy.AccessibilityId("test-LOGIN"));
+        Utils.TapElement(_driver, loginButton);
+     
         Thread.Sleep(5000);
            
         Assert.That(_driver?.FindElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"PRODUCTS\")")).Text, Is.EqualTo("PRODUCTS"));
+ var start = new Point(0, 650);
+var end = new Point(473, 650);
+  Utils.Swipe(_driver, start, end );
 
-       
  
     }
     }
