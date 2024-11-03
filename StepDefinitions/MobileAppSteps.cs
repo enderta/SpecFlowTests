@@ -2,6 +2,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Appium; 
 using OpenQA.Selenium.Appium.Android;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium.Appium;
 
 namespace SpecFlowProject.StepDefinitions
 {
@@ -46,7 +47,9 @@ options.AddAdditionalAppiumOption("appium:appActivity", "com.swaglabsmobileapp.M
         _driver?.FindElement(MobileBy.AccessibilityId("test-LOGIN")).Click();
         Thread.Sleep(5000);
            
-        Assert.That(_driver?.FindElement(By.XPath("//android.widget.TextView[@text='PRODUCTS']")).Text, Is.EqualTo("PRODUCTS"));
+        Assert.That(_driver?.FindElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"PRODUCTS\")")).Text, Is.EqualTo("PRODUCTS"));
+
+       
  
     }
     }
