@@ -5366,6 +5366,7 @@
       "packagesPath": "/home/cyf/.nuget/packages/",
       "outputPath": "/home/cyf/SpecFlowProject/obj/",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "/home/cyf/.nuget/NuGet/NuGet.Config"
       ],

@@ -1,36 +1,30 @@
+// Support/Hooks.cs
+
 using TechTalk.SpecFlow;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.IO;
+using Mobile.Drivers;
+using OpenQA.Selenium.Appium.Android;
 
-
-namespace SpecFlowProject.Support
+[Binding]
+public class Hooks
 {
-    [Binding]
-    public class WebDriverHooks
+    private readonly ScenarioContext _scenarioContext;
+
+    public Hooks(ScenarioContext scenarioContext)
     {
-        private readonly ScenarioContext _scenarioContext;
+        _scenarioContext = scenarioContext;
+    }
 
-        public WebDriverHooks(ScenarioContext scenarioContext)
-        {
-            _scenarioContext = scenarioContext;
-        }
+    [BeforeScenario]
+    public void SetupDriver()
+    {
+        Driver.Initialize(); // Initialize the driver
+        var driver = Driver.GetDriver();
+        _scenarioContext.Set(driver, "driver"); // Store the driver in ScenarioContext
+    }
 
-        [BeforeScenario]
-        public void InitializeWebDriver()
-        {
-            var driver = new ChromeDriver();
-            _scenarioContext["WebDriver"] = driver; // Store WebDriver in ScenarioContext
-            driver.Manage().Window.Maximize();
-            
-        }
-
-        [AfterScenario]
-        public void CleanUpWebDriver()
-        {
-            var driver = (IWebDriver)_scenarioContext["WebDriver"];
-            driver.Quit();
-        }
+    [AfterScenario]
+    public void TearDownDriver()
+    {
+        Driver.Quit(); // Quit the driver
     }
 }
