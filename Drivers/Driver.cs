@@ -15,15 +15,15 @@ namespace Mobile.Drivers
             var serverUri = new Uri("http://127.0.0.1:4723");
             var options = new AppiumOptions();
             options.AddAdditionalAppiumOption("platformName", "Android");
-            options.DeviceName = "R58M43YW9NE";
-            options.AutomationName = "UiAutomator2"; 
+            options.DeviceName = "adb-28061FDH200H7X-Yngbcv._adb-tls-connect._tcp"; // Updated device name
+            options.AutomationName = "UiAutomator2";
             options.AddAdditionalAppiumOption("appium:uiautomator2ServerInstallTimeout", 60000);
             options.AddAdditionalAppiumOption("appium:adbExecTimeout", 60000);
             options.AddAdditionalAppiumOption("appium:autoGrantPermissions", true);
             options.AddAdditionalAppiumOption("appium:ensureWebviewsHavePages", true);
             options.AddAdditionalAppiumOption("appium:nativeWebScreenshot", true);
             options.AddAdditionalAppiumOption("appium:connectHardwareKeyboard", true);
-            options.App = "/home/cyf/IdeaProjects/appiumSample/sauceLab.apk"; 
+            options.App = "/Users/endertanriverdi/IdeaProjects/appiumSample/sauceLab.apk";
             options.AddAdditionalAppiumOption("appium:appPackage", "com.swaglabsmobileapp");
             options.AddAdditionalAppiumOption("appium:appActivity", "com.swaglabsmobileapp.MainActivity");
 

@@ -5355,20 +5355,20 @@
     ]
   },
   "packageFolders": {
-    "/home/cyf/.nuget/packages/": {}
+    "/Users/endertanriverdi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/cyf/SpecFlowProject/SpecFlowProject.csproj",
+      "projectUniqueName": "/Users/endertanriverdi/RiderProjects/SpecFlowTests/SpecFlowProject.csproj",
       "projectName": "SpecFlowProject",
-      "projectPath": "/home/cyf/SpecFlowProject/SpecFlowProject.csproj",
-      "packagesPath": "/home/cyf/.nuget/packages/",
-      "outputPath": "/home/cyf/SpecFlowProject/obj/",
+      "projectPath": "/Users/endertanriverdi/RiderProjects/SpecFlowTests/SpecFlowProject.csproj",
+      "packagesPath": "/Users/endertanriverdi/.nuget/packages/",
+      "outputPath": "/Users/endertanriverdi/RiderProjects/SpecFlowTests/obj/",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "/home/cyf/.nuget/NuGet/NuGet.Config"
+        "/Users/endertanriverdi/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -5386,6 +5386,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5445,7 +5450,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

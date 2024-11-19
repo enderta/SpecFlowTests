@@ -48,14 +48,14 @@ options.AddAdditionalAppiumOption("appium:appActivity", "com.swaglabsmobileapp.M
         _driver?.FindElement(MobileBy.AccessibilityId("test-Username")).SendKeys("standard_user");
         _driver?.FindElement(MobileBy.AccessibilityId("test-Password")).SendKeys("secret_sauce");
          var loginButton =  _driver?.FindElement(MobileBy.AccessibilityId("test-LOGIN"));
-        Utils.TapElement(_driver, loginButton);
+        Utils2.TapElement(_driver, loginButton);
      
         Thread.Sleep(5000);
            
         Assert.That(_driver?.FindElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"PRODUCTS\")")).Text, Is.EqualTo("PRODUCTS"));
  var start = new Point(0, 650);
 var end = new Point(473, 650);
-  Utils.Swipe(_driver, start, end );
+  Utils2.Swipe(_driver, start, end );
 
  
     }

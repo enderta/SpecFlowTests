@@ -8,6 +8,7 @@ using OpenQA.Selenium.Appium.Android;
 public class Hooks
 {
     private readonly ScenarioContext _scenarioContext;
+    
 
     public Hooks(ScenarioContext scenarioContext)
     {

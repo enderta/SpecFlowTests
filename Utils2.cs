@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace SpecFlowProject
 {
-    public class Utils
+    public class Utils2
     {
         public static void Swipe(AndroidDriver driver, Point start, Point end)
         {
